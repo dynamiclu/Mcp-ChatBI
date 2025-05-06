@@ -5,7 +5,7 @@
  基于 [Mcp](https://mcp-docs.cn/) 架构的 ChatBI，是一种数据分析智能体解决方案。
 
 本项目主要解决ChatBI常见的三个问题
- + 如何保障数据的100%的准确性？
+ + 1、如何保障数据的100%的准确性？
 
     由于模型存在幻觉，无论是Text2SQL、Text2Code，都无法保障数据100%的准确。且数据的准确性又是BI系统的红线，因此，本项目使用Text2Tools的方案，Tools可以是Headless BI的服务，也可是API。
 
