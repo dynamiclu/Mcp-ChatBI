@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "python-tools": {
+      "command": "python",
+      "args": [
+        "server/math_server.py"
+      ],
+      "transport": "stdio"
+    },
+    "weather": {
+      "url": "http://localhost:8000/sse",
+      "transport": "sse",
+      "timeout": 5,
+      "sse_read_timeout": 300,
+      "headers": {
+        "Authorization": "Bearer 1234567890"
+      }
+    }
+  }
+}

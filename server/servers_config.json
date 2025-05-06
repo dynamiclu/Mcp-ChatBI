@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "python-tools": {
+      "command": "python",
+      "args": [
+        "server/douyin_open_api_server.py"
+      ],
+      "transport": "stdio"
+    }
+  }
+}
