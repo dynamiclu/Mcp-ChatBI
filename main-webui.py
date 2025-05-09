@@ -14,9 +14,7 @@ async def stream_response(message, history):
     global session_id
     async for chunk in api.data_assistant_chat(query=message, session_id=session_id, open_id=open_id):
         if chunk:
-            chunk = str(chunk).replace("{\n", "").replace("}\n", "")
             await asyncio.sleep(0.005)
-            # logger.info(f"Response chunk: {chunk}")
             new_history = history + [{"role": "assistant", "content": str(chunk)}]
             yield new_history  # 逐步更新历史记录
 
