@@ -26,38 +26,6 @@ class Server:
         self._cleanup_lock: asyncio.Lock = asyncio.Lock()
         self.exit_stack: AsyncExitStack = AsyncExitStack()
 
-    # async def initialize(self) -> None:
-    #     """Initialize the server connection."""
-    #     command = (
-    #         shutil.which("python")
-    #         if self.config["command"] == "python"
-    #         else self.config["command"]
-    #     )
-    #     if command is None:
-    #         raise ValueError("The command must be a valid string and cannot be None.")
-    #
-    #     server_params = StdioServerParameters(
-    #         command=command,
-    #         args=self.config["args"],
-    #         env={**os.environ, **self.config["env"]}
-    #         if self.config.get("env")
-    #         else None,
-    #     )
-    #     try:
-    #         stdio_transport = await self.exit_stack.enter_async_context(
-    #             stdio_client(server_params)
-    #         )
-    #         read, write = stdio_transport
-    #         session = await self.exit_stack.enter_async_context(
-    #             ClientSession(read, write)
-    #         )
-    #         await session.initialize()
-    #         self.session = session
-    #     except Exception as e:
-    #         logger.error(f"Error initializing server {self.name}: {e}")
-    #         await self.cleanup()
-    #         raise
-
     async def initialize(self) -> None:
         transport = self.config.get("transport", "stdio")
         if transport == "sse":

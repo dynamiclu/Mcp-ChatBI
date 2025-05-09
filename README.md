@@ -2,7 +2,7 @@
 
 ## 介绍
 
- 基于 [Mcp](https://mcp-docs.cn/) 架构的 ChatBI，是一种数据分析智能体解决方案。
+ 基于 [Mcp](https://mcp-docs.cn/) 架构的 ChatBI，是一种数据分析智能体的解决方案。
 
 本项目主要解决ChatBI常见的三个问题
  + 1、如何保障数据的100%的准确性？

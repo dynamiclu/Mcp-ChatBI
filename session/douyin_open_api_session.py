@@ -25,12 +25,6 @@ async def trim_messages(messages_list: list, max_messages: int) -> list:
     # Combine system messages and other messages
     return system_messages + other_messages
 
-# async def trim_messages(messages_list: list, max_messages: int) -> list:
-#     """Trim the messages list to ensure its length does not exceed max_messages using FIFO logic."""
-#     if len(messages_list) > max_messages:
-#         return messages_list[-max_messages:]
-#     return messages_list
-
 
 class DouyinOpenApiSession:
     """Orchestrates the interaction between user, LLM, and tools."""
