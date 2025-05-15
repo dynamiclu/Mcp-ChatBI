@@ -2,6 +2,10 @@ from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP("Douyin-Open-API-Server")
 
+"""
+    这是一个demo的演示，对应tool的数据都是固定的。
+    实际使用场景，可根据需求，配置相应的tool，可以查询数据库，也可调接口
+"""
 
 @mcp.tool(name="视频列表数据", description="查询视频列表, 返回视频标题、转发数、评论数、点赞数、下载数、播放数、分享数")
 def video_list(open_id: str) -> dict:
