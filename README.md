@@ -7,7 +7,7 @@
 本项目主要解决ChatBI常见的三个问题
  + 1、如何保障数据的100%的准确性？
 
-    由于模型存在幻觉，无论是Text2SQL、Text2Code，都无法保障数据100%的准确。且数据的准确性又是BI系统的红线，因此，本项目使用Text2Tools的方案，Tools可以是Headless BI的服务，也可是API。
+    由于模型存在幻觉，无论是NL2SQL、NL2Code，都无法保障数据100%的准确。且数据的准确性又是BI系统的红线，因此，本项目使用NL2Tools的方案，Tools可以是Headless BI的服务，也可是API。
 
 +  2、一次对话如何查询多个指标？
 
